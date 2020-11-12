@@ -34,6 +34,7 @@ module.exports = {
     registerEvent(client)
 
     const channel = guild.channels.cache.get(channelId)
+
     channel
       .send(
         `Ein neues Ticket wurde von <@${member.id}> erstellt!
