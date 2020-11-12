@@ -1,7 +1,4 @@
 const { prefix } = require('../config.json')
-const Discord = require('discord.js')
-const client = new Discord.Client()
-
 
 const validatePermissions = (permissions) => {
   const validPermissions = [
@@ -46,11 +43,10 @@ const validatePermissions = (permissions) => {
 }
 
 module.exports = (client, commandOptions) => {
-  
   let {
     commands,
     expectedArgs = '',
-    permissionError = 'Du hast dazu keine Berechtigung.',
+    permissionError = 'You do not have permission to run this command.',
     minArgs = 0,
     maxArgs = null,
     permissions = [],
