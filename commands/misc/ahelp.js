@@ -27,6 +27,8 @@ module.exports = {
             **${prefix}setwelcome <Text>** -- legt den WillkommensChannel, und die
             Willkommens Nachricht fest (nutze <@> um Join Member zu Taggen, gebe den Befehl im richtigen Channel ein)\n
             **${prefix}addbal <@name>** -- füge einen Member Coins hinzu
+            **${prefix}warn <@name> <Grund>** -- Verwarne Member
+            **${prefix}lw <@name>** -- listet verwarnungen von Member auf
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');

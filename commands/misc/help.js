@@ -25,6 +25,7 @@ module.exports = {
             **${prefix}add <num1> <num2>** -- rechnet 2 zahlen zusammen
             **${prefix}ticket <text>** -- eröffne ein Ticket
             **${prefix}bal [<@name>]** -- siehe deine Coins oder die eines anderen Members\n
+            **${prefix}pay <@name>** -- bezahle andere Member
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');

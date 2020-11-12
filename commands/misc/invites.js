@@ -17,7 +17,7 @@ module.exports = {
                 inviteCounter[name] = (inviteCounter[name] || 0) + uses
             })
 
-            let replyText ='Ｓ𝐞яν𝒆𝐫 Einladungen: '
+            let replyText ='Ｓ𝐞яν𝒆𝐫 Einladungen: \n\n'
 
             const sortedInvites = Object.keys(inviteCounter).sort((a, b) => inviteCounter[b] - inviteCounter[a])
 
@@ -26,7 +26,7 @@ module.exports = {
             for (const invite of sortedInvites) {
                 const count = inviteCounter[invite]
 
-                replyText += (` ${invite} hat ${count} eingeladen | | `)
+                replyText += (` ${invite} hat ${count} eingeladen | | \n\n`)
             }
             
             message.channel.send(replyText).then(sentMessage => {
