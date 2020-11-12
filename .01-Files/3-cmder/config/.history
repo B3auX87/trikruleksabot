@@ -1,7 +1,14 @@
 cd C:\Program Files\MongoDB\Server\4.4\bin
 mongod.exe
 npm install -g npm@next
-cd ..
  clear
 npm install discord.js
 npm install mongoose
+ls
+cd commands
+cd misc
+npm install discord.js-commando --save -g
+npm run
+cd ..
+npm install discord.js-commando
+npm fund

@@ -7,7 +7,7 @@ const config = require('./config.json')
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
 const messageCount = require('./utils/message-counter')
-//const commandBase = require('./commands/command-base')
+const commandBase = require('./commands/command-base')
 const mongo = require('./mongo')
 const welcome = require('./welcome')
 const polls = require('./advanced-polls')
@@ -35,8 +35,6 @@ client.on('ready', async () => {
         }
     }
 
-    readCommands('commands')
-
     await mongo().then((mongoose) => {
 
         try {
@@ -48,6 +46,7 @@ client.on('ready', async () => {
     })
 
     //commandBase.loadPrefixes(client)
+    readCommands('commands')
     memberCount(client)
     welcome(client)
     messageCount(client)

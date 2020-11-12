@@ -1,11 +1,9 @@
 const Discord = require('discord.js')
-const client = new Discord.Client()
 
 module.exports = {
     commands: ['cc', 'purge'],
-    minArgs: 0,
     maxArgs: 0,
-    callback: (message) => {
+    callback: (message, arguments, text, client) => {
 
         message.channel.messages.fetch().then(fetched => {
 
