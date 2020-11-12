@@ -9,6 +9,8 @@ const memberCount = require('./utils/member-count')
 const messageCount = require('./utils/message-counter')
 const mongo = require('./mongo')
 const welcome = require('./welcome')
+const polls = require('./advanced-polls')
+const levels = require('./levels')
 
 client.setMaxListeners(Infinity)
 
@@ -47,6 +49,8 @@ client.on('ready', async () => {
     memberCount(client)
     welcome(client)
     messageCount(client)
+    polls(client)
+    levels(client)
 
     command(client, 'eval', (message) => {
 
@@ -94,50 +98,23 @@ client.on('ready', async () => {
 
     command(client, 'status', (message) => {
 
+        const { member, mentions } = message
         const content = message.content.replace('.status', '')
 
-        client.user.setPresence({
-            activity: {
-                name: content,
-                type: 0,
-            },
-        })
-    })
 
-    command(client, 'ban', (message) => {
+        if (member.hasPermission('ADMINISTRATOR')) {
 
-        const { member, mentions } = message
-        const tag = `<@${member.id}>`
+            client.user.setPresence({
 
-        if (member.hasPermission('ADMINISTRATOR') || member.hasPermission('BAN_MEMBERS')) {
-            const target = mentions.users.first()
-
-            if (target) {
-                const targetMember = message.guild.members.cache.get(target.id)
-
-                targetMember.ban()
-
-
-                const banEmbed = new Discord.MessageEmbed()
-
-                    .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                    .setColor()
-                    .setTitle('【B】【A】【N】')
-                    .setThumbnail('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gwif')
-                    .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-                    .addField('🟢 Command User:', `${tag}`, true)
-                    .addField('🔴 Banned User:', `${targetMember}`, true)
-                    .setTimestamp(message.createdTimestamp)
-                    .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
-
-                message.reply(banEmbed)
-
-            } else {
-                message.channel.send(`${tag} Du musst jemanden angeben (bsp. @Name)`)
-            }
+                activity: {
+                    name: content,
+                    type: 0,
+                },
+                status: 'idle'
+            })
 
         } else {
-            const banNoEmbed = new Discord.MessageEmbed()
+            const statusNoEmbed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
                 .setColor()
@@ -148,61 +125,10 @@ client.on('ready', async () => {
                 .setTimestamp(message.createdTimestamp)
                 .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 
-            message.reply(banNoEmbed).then(sentMessage => {
+            message.reply(statusNoEmbed).then(sentMessage => {
                 sentMessage.delete({ timeout: 6500 })
             })
         }
-
-    })
-
-    command(client, 'kick', (message) => {
-
-        const { member, mentions } = message
-        const tag = `<@${member.id}>`
-
-        if (member.hasPermission('ADMINISTRATOR') || member.hasPermission('KICK_MEMBERS')) {
-            const target = mentions.users.first()
-
-            if (target) {
-                const targetMember = message.guild.members.cache.get(target.id)
-
-                targetMember.kick()
-
-                const kickEmbed = new Discord.MessageEmbed()
-
-                    .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                    .setColor()
-                    .setTitle('【K】【I】【C】【K】')
-                    .setThumbnail('https://64.media.tumblr.com/3356ce0a41ba251ce30e39e01ca06771/tumblr_o0t536PZNF1qjzdvgo5_500.gif')
-                    .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-                    .addField('🟢 Command User:', `${tag}`, true)
-                    .addField('🔴 Kicked User:', `${targetMember}`, true)
-                    .setTimestamp(message.createdTimestamp)
-                    .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
-
-                message.reply(kickEmbed)
-
-            } else {
-                message.channel.send(`${tag} Du musst jemanden angeben (bsp. @Name)`)
-            }
-
-        } else {
-            const kickNoEmbed = new Discord.MessageEmbed()
-
-                .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
-                .setTitle('【ＮＯＰＥ】')
-                .setThumbnail('https://media.giphy.com/media/g4UAqGuShn2P1TC3Nf/giphy.gif')
-                .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-                .addField('🟥', 'Du hast keine Berechtigung dazu', true)
-                .setTimestamp(message.createdTimestamp)
-                .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
-
-            message.reply(kickNoEmbed).then(sentMessage => {
-                sentMessage.delete({ timeout: 6500 })
-            })
-        }
-
     })
 
 })

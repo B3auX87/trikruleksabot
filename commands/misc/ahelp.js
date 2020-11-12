@@ -3,7 +3,7 @@ const client = new Discord.Client()
 const config = require('../../config.json')
 
 module.exports = {
-    commands: ['help', 'hilfe'],
+    commands: ['ahelp', 'ahilfe'],
     minArgs: 0, 
     maxArgs: 0, 
     callback: (message) => {
@@ -14,17 +14,19 @@ module.exports = {
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
             .setColor()
-            .setTitle('【H】【E】【L】【P】')
-            .setThumbnail('https://media.giphy.com/media/AXOdttXiL8MeI/giphy.gif')
+            .setTitle('【A】【H】【E】【L】【P】')
+            .setThumbnail('https://media.giphy.com/media/phJ6eMRFYI6CQ/giphy.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ** ${message.member.guild.name} **
             ˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜
-
-            **${prefix}ahelp** -- Admin Befehle
-            **${prefix}info** -- Zeigt Server Infos an
-            **${prefix}ping** -- Zeigt deinen und den Bots Ping an
-            **${prefix}add <num1> <num2>** -- rechnet 2 zahlen zusammen
-            **${prefix}ticket <text>** -- eröffne ein Ticket
-            **${prefix}bal [<@name>]** -- siehe deine Coins oder die eines anderen Members\n
+            **${prefix}cc oder [${prefix}purge]** -- Lösche die Nachrichten (Pins ausgenommen!)
+            **${prefix}status <Text>** -- Setze die Activity vom Bot
+            **${prefix}ban <@Name>** -- Member Bannen
+            **${prefix}kick <@Name>** -- Member kicken
+            **${prefix}eval <Text>** -- Mathe Helper (Owner Zugang)
+            **${prefix}invites** -- Zeigt an wer wieviel eingaladen hat
+            **${prefix}setwelcome <Text>** -- legt den WillkommensChannel, und die
+            Willkommens Nachricht fest (nutze <@> um Join Member zu Taggen, gebe den Befehl im richtigen Channel ein)\n
+            **${prefix}addbal <@name>** -- füge einen Member Coins hinzu
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
@@ -34,5 +36,5 @@ module.exports = {
         })
 
     },
-    requiredRoles: ['Member'],
+    permissions: 'ADMINISTRATOR',
 }
