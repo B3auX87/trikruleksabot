@@ -29,6 +29,7 @@ module.exports = {
             **${prefix}addbal <@name>** -- füge einen Member Coins hinzu
             **${prefix}warn <@name> <Grund>** -- Verwarne Member
             **${prefix}lw <@name>** -- listet verwarnungen von Member auf
+            **${prefix}cembed <titel> <Text> <#HexCode>** -- Erstelle ein Custom Embed
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');

@@ -129,6 +129,23 @@ client.on('ready', async () => {
         }
     })
 
+    command(client, 'shutdown', (message) => {
+        if (message.channel.type != 'text' || message.author.bot)
+            return;
+
+        let command = message.content.split(' ')[0].slice(1);
+        let isBotOwner = message.author.id == '767836880896524288';
+
+        if (command === 'shutdown') {
+
+            if (!isBotOwner)
+                return
+
+            message.channel.send('Shutting down...').then(m => {
+                client.destroy()
+            })
+        }
+    })
 })
 
 client.on('guildMemberAdd', member => {

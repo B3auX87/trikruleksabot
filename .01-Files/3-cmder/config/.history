@@ -19,3 +19,5 @@ npm install chart.js
 cd ..
 npm install axios
 npm install weather-js
+node.js
+node index.js
