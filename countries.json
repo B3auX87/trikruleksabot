@@ -7,5 +7,11 @@
     "poland": true,
     "russia": true,
     "france": true,
-    "italy": true
+    "italy": true,
+    "austria": true,
+    "luxembourg": true,
+    "switzerland": true,
+    "czech-republic": true,
+    "netherlands": true,
+    "belgium": true
 }

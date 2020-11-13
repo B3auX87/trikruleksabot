@@ -8,7 +8,7 @@ module.exports = [
         "Slug": "germany",
         "ISO2": "DE"
     },{
-        "Country": "United Kingdo",
+        "Country": "United Kingdom",
         "Slug": "united-kingdom",
         "ISO2": "GB"
     },{
@@ -35,5 +35,29 @@ module.exports = [
         "Country": "France",
         "Slug": "france",
         "ISO2": "FR"
+    },{
+        "Country": "Belgium",
+        "Slug": "belgium",
+        "ISO2": "BE"
+    },{
+        "Country": "Netherlands",
+        "Slug": "netherlands",
+        "ISO2": "NL"
+    },{
+        "Country": "Czech Republic",
+        "Slug": "czech-republic",
+        "ISO2": "CZ"
+    },{
+        "Country": "Switzerland",
+        "Slug": "switzerland",
+        "ISO2": "CH"
+    },{
+        "Country": "Luxembourg",
+        "Slug": "luxembourg",
+        "ISO2": "LU"
+    },{
+        "Country": "Austria",
+        "Slug": "austria",
+        "ISO2": "AT"
     },
 ]

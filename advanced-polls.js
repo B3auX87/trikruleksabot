@@ -1,4 +1,4 @@
-const channels = ['776382401903460362'] //poll, news ChanneID
+const channels = ['776828580373200937'] //poll, news ChanneID
 
 module.exports = (client) => {
   client.on('message', (message) => {

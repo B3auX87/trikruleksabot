@@ -56,7 +56,7 @@ client.on('ready', async () => {
     command(client, 'eval', (message) => {
 
         const oID = '767836880896524288' //OwnerID Discord
-        const cID = '775045299038060594' //ChannelID Private
+        const cID = '768083671713579051' //ChannelID Private
         const { member, channel, content } = message
 
         if (member.id === oID && channel.id === cID) {
