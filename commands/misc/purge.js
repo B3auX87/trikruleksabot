@@ -3,12 +3,12 @@ const Discord = require('discord.js')
 module.exports = {
     commands: ['cc', 'purge'],
     maxArgs: 0,
-    callback: (message, arguments, text, client) => {
+    callback: (message, args, text, client) => {
 
         message.channel.messages.fetch().then(fetched => {
 
-            const notPinned = fetched.filter(fetchedMsg => !fetchedMsg.pinned);
-
+            const notPinned = fetched.filter(fetchedMsg => !fetchedMsg.pinned)
+            
             message.channel.bulkDelete(notPinned, true);
 
             const ccEmbed = new Discord.MessageEmbed()

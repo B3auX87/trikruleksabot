@@ -18,7 +18,8 @@ SugesstionSystem (simple)
 
 **Admin CMDs**
 
-cc oder purge (channel clear)
+cc oder purge (complete channel clear without Pins)
+clear (löscht Angegebene Anzahl von Nachrichten, inclusive Pins)
 neuen Status vom Bot setzen
 ban Member
 kick Member
