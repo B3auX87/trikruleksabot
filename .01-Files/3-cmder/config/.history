@@ -18,3 +18,4 @@ npm install chartjs-node-canvas
 npm install chart.js
 cd ..
 npm install axios
+npm install weather-js

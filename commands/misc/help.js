@@ -26,8 +26,8 @@ module.exports = {
             **${prefix}pay <@name>** -- bezahle andere Member
             **${prefix}suggestion <Text>** -- mache einen Vorschlag im Suggestion Channel\n
             **${prefix}cases <Land>** -- covid Status Verfügbare Länder:
-            germany, poland, united-kingdom, italy, united-states, denmark, russia, france,
-            austria (österreich), luxembourg, switzerland, czech-republic, netherlands, belgium\n
+            germany, poland, united-kingdom, italy, united-states, denmark, russia, france, austria (österreich), luxembourg, switzerland,
+            czech-republic, netherlands, belgium\n
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
