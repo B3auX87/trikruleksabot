@@ -1,10 +1,8 @@
 const Discord = require('discord.js')
-const client = new Discord.Client()
 const config = require('../../config.json')
 
 module.exports = {
     commands: ['help', 'hilfe'],
-    minArgs: 0, 
     maxArgs: 0, 
     callback: (message) => {
 
@@ -26,6 +24,7 @@ module.exports = {
             **${prefix}ticket <text>** -- eröffne ein Ticket
             **${prefix}bal [<@name>]** -- siehe deine Coins oder die eines anderen Members\n
             **${prefix}pay <@name>** -- bezahle andere Member
+            **${prefix}suggestion <Text>** -- mache einen Vorschlag im Suggestion Channel\n
             `)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');

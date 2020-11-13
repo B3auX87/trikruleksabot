@@ -7,13 +7,14 @@ const config = require('./config.json')
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
 const messageCount = require('./utils/message-counter')
-const commandBase = require('./commands/command-base')
+const axios = require('axios')
+const countries = require("./countries.json")
+const url = 'https://api.covid19api.com/total/country/'
+const WAKE_COMMAND = '.cases'
 const mongo = require('./mongo')
 const welcome = require('./welcome')
 const polls = require('./advanced-polls')
 const levels = require('./levels')
-
-client.setMaxListeners(Infinity)
 
 client.on('ready', async () => {
 
@@ -45,7 +46,6 @@ client.on('ready', async () => {
 
     })
 
-    //commandBase.loadPrefixes(client)
     readCommands('commands')
     memberCount(client)
     welcome(client)
@@ -133,5 +133,40 @@ client.on('ready', async () => {
     })
 
 })
+
+client.on('message', async (msg) => {
+
+    const content = msg.content.split(/[ ,]+/)
+    if (content[0] === WAKE_COMMAND) {
+
+        if (content.length > 2) {
+
+            msg.reply("Too many arguments...")
+        }
+        else if (content.length === 1) {
+
+            msg.reply("Not enough arguments")
+        }
+        else if (!countries[content[1]]) {
+
+            msg.reply("Wrong country format")
+        }
+        else {
+
+            const slug = content[1]
+            const payload = await axios.get(`${url}${slug}`)
+            const covidData = payload.data.pop();
+
+            msg.reply(`Confirmed: ${covidData.Confirmed}, Deaths: ${covidData.Deaths}, Recovered: ${covidData.Recovered}, Active: ${covidData.Active} `)
+        }
+    }
+})
+
+client.on('guildMemberAdd', member => {
+    var role = member.guild.roles.cache.find(role => role.name === 'Member')
+    member.roles.add(role)
+})
+
+client.setMaxListeners(Infinity)
 
 client.login(config.token)
