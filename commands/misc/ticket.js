@@ -1,4 +1,4 @@
-const channelId = '776349347658727435' // Ticket Channel ID
+const channelId = '769659980843712563' // Ticket Channel ID
 const check = '✅'
 let registered = false
 

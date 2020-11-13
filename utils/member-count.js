@@ -1,5 +1,5 @@
 module.exports = client => {
-    const channelID = '775846408913682452' //channelID
+    const channelID = '776563080451981332' //channelID
 
     const updateMembers = guild => {
         const channel = guild.channels.cache.get(channelID)
@@ -10,6 +10,6 @@ module.exports = client => {
     client.on('guildMemberAdd', member => updateMembers(member.guild))
     client.on('guildMemberRemove', member => updateMembers(member.guild))
 
-    const guild = client.guilds.cache.get('774643282759647232') //ServerID
+    const guild = client.guilds.cache.get('768083671193747486') //ServerID
     updateMembers(guild)
 }
