@@ -6,7 +6,7 @@ module.exports = {
     expectedArgs: '<City>',
     minArgs: 1,
     maxArgs: 1,
-    callback: (message, args) => {
+    callback: async (message, args) => {
 
         let city = args.join(" ");
         let degreetype = "C"; // You can change it to F. (fahrenheit.)
