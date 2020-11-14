@@ -155,4 +155,4 @@ client.on('guildMemberAdd', member => {
 
 client.setMaxListeners(Infinity)
 
-client.login(config.token)
+client.login(process.env.TOKEN)

@@ -1,5 +1,4 @@
 {
-    "token": "Nzc0NjQzOTAyNjY4OTk2NjA4.X6axWg.EhQpGMKKcCWd_aAJAD_ROly46DI",
     "prefix": ".",
-    "mongoPath": "mongodb://localhost:27017/Leksa"
+    "mongoPath": "mongodb+srv://Leksa:dGcDNCDLNK9T6PKZ@leksabot.wqdbs.mongodb.net/Leksa?retryWrites=true&w=majority"
 }
