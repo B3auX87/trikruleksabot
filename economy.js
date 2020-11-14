@@ -33,8 +33,8 @@ module.exports.addCoins = async (guildId, userId, coins) => {
       coinsCache[`${guildId}-${userId}`] = result.coins
 
       return result.coins
-    } finally {
-      mongoose.connection.close()
+    } catch {
+      console.error();
     }
   })
 }
