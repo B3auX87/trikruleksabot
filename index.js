@@ -130,7 +130,7 @@ client.on('ready', async () => {
     })
 })
 
-client.on('guildMemberAdd', (member, message) => {
+client.on('guildMemberAdd', (member) => {
 
     const avatar = member.user.displayAvatarURL({ dynamic: true, format: 'png' })
     const wEmbed = new Discord.MessageEmbed()
@@ -140,7 +140,6 @@ client.on('guildMemberAdd', (member, message) => {
             schau doch mal bei unseren Regeln vorbei (#rules),\n
             ansonsten wünschen wir dir viel Spass!`)
         .setColor('#e6d0ff')
-        .setTimestamp(message.createdTimestamp)
         .setFooter(`${member.nickname}`)
 
     member.guild.channels.cache.find(i => i.name === 'welcome').send(wEmbed)
@@ -149,14 +148,13 @@ client.on('guildMemberAdd', (member, message) => {
     member.roles.add(role)
 })
 
-client.on('guildMemberRemove', (member, message) => {
+client.on('guildMemberRemove', (member) => {
 
     const avatar = member.user.displayAvatarURL({ dynamic: true, format: 'png' })
     const bEmbed = new Discord.MessageEmbed()
         .setTitle(`**GoodBye** ${member.nickname}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setColor('#e6d0ff')
-        .setTimestamp(message.createdTimestamp)
         .setFooter(`${member.nickname}`)
 
     member.guild.channels.cache.find(i => i.name === 'spam').send(bEmbed)
