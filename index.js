@@ -3,16 +3,15 @@ const fs = require('fs')
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const config = require('./config.json')
-const SQLite = require("better-sqlite3");
-const sql = new SQLite('./scores.sqlite');
 
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
 const messageCount = require('./utils/message-counter')
-const mongo = require('./mongo')
+//const mongo = require('./mongo')
 const welcome = require('./welcome')
 const polls = require('./advanced-polls')
-const levels = require('./levels')
+const level2 = require('./level2')
+//const levels = require('./levels')
 
 client.on('ready', async () => {
 
@@ -45,12 +44,14 @@ client.on('ready', async () => {
 
     })
 
+
     readCommands('commands')
     memberCount(client)
     welcome(client)
     messageCount(client)
     polls(client)
-    levels(client)
+    level2(client)
+//    levels(client)
 
     command(client, 'eval', (message) => {
 
