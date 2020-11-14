@@ -2,9 +2,10 @@ const discord = require('discord.js');
 const config = require('../../config.json');
 
 module.exports = {
-    commands: ['ahelp', 'ahilfe'],
+    commands: 'report',
     minArgs: 3,
     maxArgs: 3,
+    expectedArgs: '<Member> <Grund>',
     permissions: 'ADMINISTRATOR',
     callback: (message, client, args) => {
 
