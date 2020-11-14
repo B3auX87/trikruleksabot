@@ -6,7 +6,6 @@ const fs = require('fs')
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
 const polls = require('./advanced-polls')
-const levels = require('./levels')
 
 client.on('ready', async () => {
 
@@ -32,7 +31,6 @@ client.on('ready', async () => {
     readCommands('commands')
     memberCount(client)
     polls(client)
-    levels(client)
 
     command(client, 'eval', (message) => {
 
