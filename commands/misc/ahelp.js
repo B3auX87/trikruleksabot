@@ -24,11 +24,6 @@ module.exports = {
             **${prefix}kick <@Name>** -- Member kicken
             **${prefix}eval <Text>** -- Mathe Helper (Owner Zugang)
             **${prefix}invites** -- Zeigt an wer wieviel eingaladen hat
-            **${prefix}setwelcome <Text>** -- legt den WillkommensChannel, und die
-            Willkommens Nachricht fest (nutze <@> um Join Member zu Taggen, gebe den Befehl im richtigen Channel ein)\n
-            **${prefix}addbal <@name>** -- füge einen Member Coins hinzu
-            **${prefix}warn <@name> <Grund>** -- Verwarne Member
-            **${prefix}lw <@name>** -- listet verwarnungen von Member auf
             **${prefix}cembed <titel> <Text> <#HexCode>** -- Erstelle ein Custom Embed
             `)
             .setTimestamp(message.createdTimestamp)
