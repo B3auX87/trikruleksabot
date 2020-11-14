@@ -38,7 +38,7 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
                 .setTitle('⤷ Listen now on Spotify!')
-                .setURL(`${url}`)
+                .setURL(`https:/open.spotify.com/track/${status.syncID}`)
                 .setAuthor("Spotify Track Information", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
                 .setColor(0x1ED768)
                 .setThumbnail(image)
