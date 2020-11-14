@@ -35,8 +35,8 @@ module.exports = {
         }
 
         message.reply(reply)
-      } finally {
-        mongoose.connection.close()
+      } catch {
+        console.error();
       }
     })
   },

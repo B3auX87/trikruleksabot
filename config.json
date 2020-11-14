@@ -1,4 +1,3 @@
 {
-    "prefix": ".",
-    "mongoPath": "mongodb+srv://Leksa:dGcDNCDLNK9T6PKZ@leksabot.wqdbs.mongodb.net/Leksa?retryWrites=true&w=majority"
+    "prefix": "."
 }

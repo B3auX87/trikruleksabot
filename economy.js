@@ -71,8 +71,8 @@ module.exports.getCoins = async (guildId, userId) => {
       coinsCache[`${guildId}-${userId}`] = coins
 
       return coins
-    } finally {
-      mongoose.connection.close()
+    } catch {
+      console.error()
     }
   })
 }

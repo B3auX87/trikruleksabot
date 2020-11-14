@@ -67,8 +67,8 @@ module.exports = {
             upsert: true,
           }
         )
-      } finally {
-        mongoose.connection.close()
+      } catch {
+        console.error();
       }
     })
   },
