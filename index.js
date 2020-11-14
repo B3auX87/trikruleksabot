@@ -3,6 +3,8 @@ const fs = require('fs')
 const Discord = require('discord.js')
 const client = new Discord.Client()
 const config = require('./config.json')
+const SQLite = require("better-sqlite3");
+const sql = new SQLite('./scores.sqlite');
 
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
@@ -37,8 +39,8 @@ client.on('ready', async () => {
 
         try {
             console.log('Connected to mongo!')
-        } finally {
-            mongoose.connection.close()
+        } catch {
+            console.error();
         }
 
     })
@@ -154,5 +156,4 @@ client.on('guildMemberAdd', member => {
 })
 
 client.setMaxListeners(Infinity)
-
 client.login(process.env.TOKEN)
