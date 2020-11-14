@@ -83,7 +83,7 @@ module.exports = {
 
             || rusername[i].toLowerCase() == "9") {
 
-                username += rawusername[i].toLowerCase()
+                username += rusername[i].toLowerCase()
             }
         }
 
