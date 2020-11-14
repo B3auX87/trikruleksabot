@@ -21,9 +21,9 @@ module.exports = {
             **${prefix}info** -- Zeigt Server Infos an
             **${prefix}ping** -- Zeigt deinen und den Bots Ping an
             **${prefix}add <num1> <num2>** -- rechnet 2 zahlen zusammen
-            **${prefix}cticket** -- eröffne ein Ticket
-            **${prefix}meme** -- Zeigt Random Memes an
-            **${prefix}wetter <Stadt/Postleitzahl>** -- Wetter infos
+            **${prefix}cticket/createticket** -- eröffne ein Ticket
+            **${prefix}meme/memes** -- Zeigt Random Memes an
+            **${prefix}wetter/weather <Stadt/Postleitzahl>** -- Wetter infos
             **${prefix}ascii <Text>** -- cooler Text style
             **${prefix}spotify [<@name>] -- Spotify Informationen
             **${prefix}suggestion <Text>** -- mache einen Vorschlag im Suggestion Channel\n
