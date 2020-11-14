@@ -6,19 +6,18 @@
   "engines": {
     "node": "14.15.0"
   },
-    "scripts": {
-      "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "keywords": [],
-    "author": "o0_B3auX_0o",
-    "license": "ISC",
-    "dependencies": {
-      "ascii-art": "^2.5.0",
-      "axios": "^0.21.0",
-      "better-sqlite3": "^7.1.1",
-      "discord.js": "^12.4.1",
-      "random-puppy": "^1.1.0",
-      "weather-js": "^2.0.0"
-    
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "o0_B3auX_0o",
+  "license": "ISC",
+  "dependencies": {
+    "ascii-art": "^2.5.0",
+    "axios": "^0.21.0",
+    "better-sqlite3": "^7.1.1",
+    "discord.js": "^12.4.1",
+    "random-puppy": "^1.1.0",
+    "weather-js": "^2.0.0"
   }
 }
