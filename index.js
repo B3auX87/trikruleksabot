@@ -140,7 +140,7 @@ client.on('guildMemberAdd', (member) => {
             schau doch mal bei unseren Regeln vorbei (#rules),\n
             ansonsten wünschen wir dir viel Spass!`)
         .setColor('#e6d0ff')
-        .setFooter(`${member.nickname}`)
+        .setFooter(`${member.displayName}`)
 
     member.guild.channels.cache.find(i => i.name === 'welcome').send(wEmbed)
 
@@ -154,8 +154,16 @@ client.on('guildMemberRemove', (member) => {
     const bEmbed = new Discord.MessageEmbed()
         .setTitle(`**GoodBye** ${member.displayName}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
+        .setDescription(`Wenn Sie mich gehen sehen\n
+        Zur Goldenen Pforte\n
+        Umdrehen, aufhören zu reden\n
+        Anhalten und zögern\n
+        Ich werde dort oben warten.\n
+        Mit meinem Schicksal in der Luft für Sie\n\n
+        
+        Auf Wiedersehen`)
         .setColor('#e6d0ff')
-        .setFooter(`${member.nickname}`)
+        .setFooter(`${member.displayName}`)
 
     member.guild.channels.cache.find(i => i.name === 'spam').send(bEmbed)
 
