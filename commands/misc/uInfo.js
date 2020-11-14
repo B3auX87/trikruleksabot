@@ -2,8 +2,9 @@ const { MessageEmbed } = require('discord.js')
 
 module.exports = {
     commands: ['userinfo', 'uinfo'],
-    minArgs: 0,
-    maxArgs: 0,
+    minArgs: 1,
+    maxArgs: 1,
+    expectedArgs: '<@name>',
     callback: async (message) => {
 
         const { guild, channel } = message
