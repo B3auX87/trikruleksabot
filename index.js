@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const client = new Discord.Client()
+const client = new Discord.Client({disableMentions: 'everyone'})
 
 const path = require('path')
 const fs = require('fs')
@@ -134,7 +134,7 @@ client.on('guildMemberAdd', (member) => {
 
     const avatar = member.user.displayAvatarURL({ dynamic: true, format: 'png' })
     const wEmbed = new Discord.MessageEmbed()
-        .setTitle(`**Willkommen** ${member.displayName}`, `${avatar}`)
+        .setTitle(`**Hallo** ${member.displayName}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setDescription(`**Willkommen auf Trikru**\n
             schau doch mal bei unseren Regeln vorbei (#rules),\n
@@ -155,13 +155,13 @@ client.on('guildMemberRemove', (member) => {
         .setTitle(`**GoodBye** ${member.displayName}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setDescription(`Wenn Sie mich gehen sehen\n
-        Zur Goldenen Pforte\n
-        Umdrehen, aufhören zu reden\n
-        Anhalten und zögern\n
-        Ich werde dort oben warten.\n
-        Mit meinem Schicksal in der Luft für Sie\n\n
+            Zur Goldenen Pforte\n
+            Umdrehen, aufhören zu reden\n
+            Anhalten und zögern\n
+            Ich werde dort oben warten.\n
+            Mit meinem Schicksal in der Luft für Sie\n\n
         
-        Auf Wiedersehen`)
+            Auf Wiedersehen`)
         .setColor('#e6d0ff')
         .setFooter(`${member.displayName}`)
 
