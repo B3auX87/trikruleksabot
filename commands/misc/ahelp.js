@@ -1,5 +1,5 @@
+
 const Discord = require('discord.js')
-const client = new Discord.Client()
 const config = require('../../config.json')
 
 module.exports = {
@@ -13,7 +13,7 @@ module.exports = {
         const helpEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#a9f2e5')
             .setTitle('【A】【H】【E】【L】【P】')
             .setThumbnail('https://media.giphy.com/media/phJ6eMRFYI6CQ/giphy.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ** ${message.member.guild.name} **
@@ -36,4 +36,5 @@ module.exports = {
 
     },
     permissions: 'ADMINISTRATOR',
+
 }

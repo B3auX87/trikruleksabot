@@ -43,7 +43,7 @@ client.on('ready', async () => {
             const evalembed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#304281')
                 .setTitle('【E】【V】【A】【L】')
                 .setThumbnail('https://media.giphy.com/media/IvV2SJ6ukwsAEI9lBa/giphy.gif')
                 .setDescription('Simpler Taschenrechner')
@@ -60,7 +60,7 @@ client.on('ready', async () => {
             const evalNoEmbed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#ff3f76')
                 .setTitle('【ＮＯＰＥ】')
                 .setThumbnail('https://media.giphy.com/media/g4UAqGuShn2P1TC3Nf/giphy.gif')
                 .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
@@ -97,7 +97,7 @@ client.on('ready', async () => {
             const statusNoEmbed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#ff3f76')
                 .setTitle('【ＮＯＰＥ】')
                 .setThumbnail('https://media.giphy.com/media/g4UAqGuShn2P1TC3Nf/giphy.gif')
                 .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
@@ -170,4 +170,5 @@ client.on('guildMemberRemove', (member) => {
 })
 
 client.setMaxListeners(Infinity)
+
 client.login(process.env.TOKEN)

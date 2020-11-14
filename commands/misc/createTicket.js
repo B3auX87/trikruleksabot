@@ -121,4 +121,5 @@ module.exports = {
         message.reply('Dein Ticket Channel wurde erstellt. Bitte gehe in diesen Kanal und beschreibe dein Problem!').then(msg => msg.delete({timeout: '5000'}))
 
     }
+
 }

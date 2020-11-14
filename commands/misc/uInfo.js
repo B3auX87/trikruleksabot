@@ -15,6 +15,7 @@ module.exports = {
 
         const embed = new MessageEmbed()
             .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
+            .setColor('#dd5d5d')
             .addFields(
                 {
                     name: 'Member tag',
@@ -46,4 +47,5 @@ module.exports = {
     },
     
     permissions: 'ADMINISTRATOR',
+
 }

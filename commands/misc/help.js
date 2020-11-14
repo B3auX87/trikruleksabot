@@ -11,7 +11,7 @@ module.exports = {
         const helpEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#a9f2e5')
             .setTitle('【H】【E】【L】【P】')
             .setThumbnail('https://media.giphy.com/media/AXOdttXiL8MeI/giphy.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ** ${message.member.guild.name} **
