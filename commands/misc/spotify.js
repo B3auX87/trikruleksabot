@@ -37,8 +37,6 @@ module.exports = {
             let time = `${minutes}:${seconds}`;
 
             const embed = new Discord.MessageEmbed()
-                .setTitle('⤷ Listen now on Spotify!')
-                .setURL(`https:/open.spotify.com/track/${status.syncID}`)
                 .setAuthor("Spotify Track Information", "https://image.flaticon.com/icons/svg/2111/2111624.svg")
                 .setColor(0x1ED768)
                 .setThumbnail(image)
@@ -58,6 +56,10 @@ module.exports = {
                     {
                         name: '⤷ Duration:',
                         value: time,
+                    },
+                    {
+                        name: '⤷ Listen now on Spotify!',
+                        value: `${artist} - ${name},\n (${url})`,
                     })
                     
             message.channel.send(embed)
