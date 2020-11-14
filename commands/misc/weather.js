@@ -61,7 +61,9 @@ module.exports = {
                         value: current.observationtime,
                     })
 
-            message.channel.send(embed)
+            message.channel.send(embed).then(sentMessage => {
+                sentMessage.delete({ timeout: 50000 })
+            })
         })
     }
 }

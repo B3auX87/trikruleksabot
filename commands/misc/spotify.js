@@ -59,10 +59,12 @@ module.exports = {
                     },
                     {
                         name: '⤷ Listen now on Spotify!',
-                        value: `${artist} - ${name},\n (${url})`,
+                        value: `${artist} - ${name}\n (${url})`,
                     })
                     
-            message.channel.send(embed)
+            message.channel.send(embed).then(sentMessage => {
+                sentMessage.delete({ timeout: 50000 })
+            })
         }
     }
 }
