@@ -13,7 +13,7 @@ module.exports = {
         const addEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#154569')
             .setTitle('【Ａｄｄｉｔｉｏｎ】')
             .setThumbnail('https://media.giphy.com/media/IvV2SJ6ukwsAEI9lBa/giphy.gif')
             .setDescription('𝔼 ℝ 𝔾 𝔼 𝔹 ℕ 𝕀 𝕊')

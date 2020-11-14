@@ -18,7 +18,7 @@ module.exports = {
         const banEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#ff3f76')
             .setTitle('【B】【A】【N】')
             .setThumbnail('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gwif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)

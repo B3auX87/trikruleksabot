@@ -22,7 +22,7 @@ module.exports = {
             const caseEmbed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#5d24c8')
                 .setTitle('ＣＯＶＩＤ_１９')
                 .setThumbnail('https://media.giphy.com/media/KCvzHXd3nz2Oh3LkNn/giphy.gif')
                 .setDescription(`  **Land**  :   ••¤ ${slug} ¤••`)

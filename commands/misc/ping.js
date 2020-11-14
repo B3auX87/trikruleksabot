@@ -11,7 +11,7 @@ module.exports = {
             const pingembed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#e5fbdb')
                 .setTitle('【P】【I】【N】【G】')
                 .setThumbnail('https://media.giphy.com/media/Kjqyc7spzgOK4/giphy.gif')
                 .setDescription('Dein Ping und der Ping vom Bot')

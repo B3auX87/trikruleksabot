@@ -17,7 +17,7 @@ module.exports = {
         const kickEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#f47996')
             .setTitle('【K】【I】【C】【K】')
             .setThumbnail('https://64.media.tumblr.com/3356ce0a41ba251ce30e39e01ca06771/tumblr_o0t536PZNF1qjzdvgo5_500.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)

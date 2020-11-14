@@ -14,7 +14,7 @@ module.exports = {
             const ccEmbed = new Discord.MessageEmbed()
 
                 .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-                .setColor()
+                .setColor('#ff3f76')
                 .setTitle('【P】【U】【R】【G】【E】')
                 .setThumbnail('https://media.giphy.com/media/Nbfanu3HvTMru/giphy.gif')
                 .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)

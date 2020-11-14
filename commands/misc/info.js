@@ -13,7 +13,7 @@ module.exports = {
         const serverEmbed = new Discord.MessageEmbed()
 
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
-            .setColor()
+            .setColor('#ddff87')
             .setTitle('【I】【N】【F】【O】')
             .setThumbnail(icon)
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${name} ¤••`)
