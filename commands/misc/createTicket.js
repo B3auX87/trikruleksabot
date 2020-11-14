@@ -7,7 +7,7 @@ module.exports = {
         let rusername = message.author.username.split('').slice(0)
         let username = ''
 
-        for (i = 0; i < rawusername.length; i++) {
+        for (i = 0; i < rusername.length; i++) {
 
             if (rusername[i].toLowerCase() == "a"
 
