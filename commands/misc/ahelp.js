@@ -24,6 +24,7 @@ module.exports = {
             **${prefix}kick <@Name>** -- Member kicken
             **${prefix}eval <Text>** -- Mathe Helper (Owner Zugang)
             **${prefix}invites** -- Zeigt an wer wieviel eingaladen hat
+            **${prefix}clticket** -- Schließe ein Ticket
             **${prefix}cembed <titel> <Text> <#HexCode>** -- Erstelle ein Custom Embed
             `)
             .setTimestamp(message.createdTimestamp)

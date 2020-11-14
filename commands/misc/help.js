@@ -21,7 +21,8 @@ module.exports = {
             **${prefix}info** -- Zeigt Server Infos an
             **${prefix}ping** -- Zeigt deinen und den Bots Ping an
             **${prefix}add <num1> <num2>** -- rechnet 2 zahlen zusammen
-            **${prefix}ticket <text>** -- eröffne ein Ticket
+            **${prefix}cticket** -- eröffne ein Ticket
+            **${prefix}meme -- Zeigt Random Memes an
             **${prefix}suggestion <Text>** -- mache einen Vorschlag im Suggestion Channel\n
             **${prefix}cases <Land>** -- covid Status Verfügbare Länder:
             germany, poland, united-kingdom, italy, united-states, denmark, russia, france, austria (österreich), luxembourg, switzerland,

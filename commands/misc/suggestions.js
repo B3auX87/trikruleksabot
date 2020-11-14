@@ -9,7 +9,7 @@ module.exports = {
   callback: (message, args) => {
 
     const cID = '771112732241559603' //suggestions channel ID
-    const { member, channel, content } = message
+    const { channel } = message
 
     if (channel.id === cID) {
 
