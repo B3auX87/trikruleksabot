@@ -2,9 +2,9 @@ const Discord = require('discord.js')
 const convert = require('parse-ms')
 
 module.exports = {
-    commands: ['weather', 'wetter'],
-    expectedArgs: '<City>/<Postleitzahl>',
-    minArgs: 1,
+    commands: 'spotify',
+    expectedArgs: '<@Member>',
+    maxArgs: 1,
     callback: async (message) => {
 
         let user;
