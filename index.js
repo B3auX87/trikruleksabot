@@ -134,7 +134,7 @@ client.on('guildMemberAdd', (member, message) => {
 
     const avatar = member.user.displayAvatarURL({ dynamic: true, format: 'png' })
     const wEmbed = new Discord.MessageEmbed()
-        .setTitle(`**Willkommen** ${message.author.username}`, `${avatar}`)
+        .setTitle(`**Willkommen** ${member.nickname}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setDescription(`**Willkommen auf Trikru**\n
             schau doch mal bei unseren Regeln vorbei (#rules),\n
@@ -153,7 +153,7 @@ client.on('guildMemberRemove', (member, message) => {
 
     const avatar = member.user.displayAvatarURL({ dynamic: true, format: 'png' })
     const bEmbed = new Discord.MessageEmbed()
-        .setTitle(`**GoodBye** ${message.author.username}`, `${avatar}`)
+        .setTitle(`**GoodBye** ${member.nickname}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setColor('#e6d0ff')
         .setTimestamp(message.setTimestamp)
