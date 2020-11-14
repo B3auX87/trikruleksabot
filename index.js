@@ -130,7 +130,7 @@ client.on('ready', async () => {
     })
 })
 
-client.on('guildMemberAdd', member => {
+client.on('guildMemberAdd', (member, message) => {
 
     const avatar = message.author.displayAvatarURL({ dynamic: true, format: 'png' })
     const wEmbed = new Discord.MessageEmbed()
@@ -149,7 +149,7 @@ client.on('guildMemberAdd', member => {
     member.roles.add(role)
 })
 
-client.on('guildMemberRemove', member => {
+client.on('guildMemberRemove', (member, message) => {
 
     const avatar = message.author.displayAvatarURL({ dynamic: true, format: 'png' })
     const bEmbed = new Discord.MessageEmbed()
