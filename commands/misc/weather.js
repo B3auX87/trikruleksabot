@@ -2,10 +2,9 @@ const Discord = require("discord.js");
 const weather = require("weather-js");
 
 module.exports = {
-    commands: 'weather',
-    expectedArgs: '<City>',
+    commands: ['weather', 'wetter'],
+    expectedArgs: '<City>/<Postleitzahl>',
     minArgs: 1,
-    maxArgs: 1,
     callback: async (message, args) => {
 
         let city = args.join(" ");
