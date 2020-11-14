@@ -1,3 +1,5 @@
+const ascii = require('ascii-art')
+
 module.exports = {
     commands: 'ascii',
     expectedArgs: '<text>',
