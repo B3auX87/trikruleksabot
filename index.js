@@ -140,7 +140,7 @@ client.on('guildMemberAdd', (member, message) => {
             schau doch mal bei unseren Regeln vorbei (#rules),\n
             ansonsten wünschen wir dir viel Spass!`)
         .setColor('#e6d0ff')
-        .setTimestamp(message.setTimestamp)
+        .setTimestamp(message.createdTimestamp)
         .setFooter(`${member.nickname}`)
 
     member.guild.channels.cache.find(i => i.name === 'welcome').send(wEmbed)
@@ -156,7 +156,7 @@ client.on('guildMemberRemove', (member, message) => {
         .setTitle(`**GoodBye** ${member.nickname}`, `${avatar}`)
         .setThumbnail(`${avatar}`)
         .setColor('#e6d0ff')
-        .setTimestamp(message.setTimestamp)
+        .setTimestamp(message.createdTimestamp)
         .setFooter(`${member.nickname}`)
 
     member.guild.channels.cache.find(i => i.name === 'spam').send(bEmbed)
