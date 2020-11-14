@@ -59,7 +59,7 @@ module.exports = {
                     },
                     {
                         name: '⤷ Listen now on Spotify!',
-                        value: `[\`${artist} - ${name}\`](${url})`,
+                        value: `${artist} - ${name}, (${url})`,
                     })
                     
             message.channel.send(embed)
