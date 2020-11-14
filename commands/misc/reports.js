@@ -3,8 +3,8 @@ const config = require('../../config.json');
 
 module.exports = {
     commands: 'report',
-    minArgs: 3,
-    maxArgs: 3,
+    minArgs: 2,
+    maxArgs: 2,
     expectedArgs: '<Member> <Grund>',
     permissions: 'ADMINISTRATOR',
     callback: (message, client, args) => {
@@ -12,10 +12,6 @@ module.exports = {
         let target = message.guild.member(message.mentions.users.first() || message.guild.members.get(args[0]));
         let reason = args.slice(1).join(' ');
         let reports = message.guild.channels.find('name', config.reportsChannel);
-
-        if (!target) return message.reply('Bitte gebe den Member an den du Reporten möchtest!');
-        if (!reason) return message.reply('Bitte gebe einen Grund für diesen Report an!');
-        if (!reports) return message.reply(`Bitte erstelle einen channel mit dem Namen ${config.reportsChannel} um die Reports schicken und einsehen zu können!`);
 
         let embed = new discord.RichEmbed()
             .setColor('RANDOM')
