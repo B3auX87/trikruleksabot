@@ -15,31 +15,31 @@ module.exports = {
         console.log(member)
 
         const embed = new MessageEmbed()
-            .setAuthor(`User info for ${user.username}`, user.displayAvatarURL())
+            .setAuthor(`User info von ${user.username}`, user.displayAvatarURL())
             .setColor('#dd5d5d')
             .addFields(
                 {
-                    name: 'Member tag',
+                    name: '●► Member tag',
                     value: user.tag,
                 },
                 {
-                    name: 'Ist Bot',
+                    name: '●► Ist Bot',
                     value: user.bot,
                 },
                 {
-                    name: 'Nickname',
+                    name: '●► Nickname',
                     value: member.nickname || 'None',
                 },
                 {
-                    name: 'Joined Server',
+                    name: '●► Joined Server',
                     value: new Date(member.joinedTimestamp).toLocaleDateString(),
                 },
                 {
-                    name: 'Joined Discord',
+                    name: '●► Joined Discord',
                     value: new Date(user.createdTimestamp).toLocaleDateString(),
                 },
                 {
-                    name: 'Roles',
+                    name: '●► Roles',
                     value: member.roles.cache.size - 1,
                 }
             )
