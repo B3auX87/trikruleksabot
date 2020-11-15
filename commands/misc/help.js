@@ -18,47 +18,47 @@ module.exports = {
             ˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜`)
             .addFields(
                 {
-                    name: `⑉ **${prefix}ahelp**`,
+                    name: `✻ **${prefix}ahelp**`,
                     value: '》 Admin Befehle',
                 },
                 {
-                    name: `⑉ **${prefix}info**`,
+                    name: `✻ **${prefix}info**`,
                     value: '》 Zeigt Server Infos an',
                 },
                 {
-                    name: `⑉ **${prefix}ping**`,
+                    name: `✻ **${prefix}ping**`,
                     value: '》 Zeigt deinen und den Bots Ping an',
                 },
                 {
-                    name: `⑉ **${prefix}add <num1> <num2>**`,
+                    name: `✻ **${prefix}add <num1> <num2>**`,
                     value: '》 rechnet 2 zahlen zusammen',
                 },
                 {
-                    name: `⑉ **${prefix}cticket/createticket**`,
+                    name: `✻ **${prefix}cticket/createticket**`,
                     value: '》 eröffne ein Ticket',
                 },
                 {
-                    name: `⑉ **${prefix}meme/memes**`,
+                    name: `✻ **${prefix}meme/memes**`,
                     value: '》 Zeigt Random Memes an',
                 },
                 {
-                    name: `⑉ **${prefix}wetter/weather <Stadt/Postleitzahl>**`,
+                    name: `✻ **${prefix}wetter/weather <Stadt/Postleitzahl>**`,
                     value: '》 Wetter infos',
                 },
                 {
-                    name: `⑉ **${prefix}ascii <Text>**`,
+                    name: `✻ **${prefix}ascii <Text>**`,
                     value: '》 Style dein text',
                 },
                 {
-                    name: `⑉ **${prefix}spotify [<@name>]**`,
+                    name: `✻ **${prefix}spotify [<@name>]**`,
                     value: '》 Spotify Informationen',
                 },
                 {
-                    name: `⑉ **${prefix}suggestion <Text>**`,
+                    name: `✻ **${prefix}suggestion <Text>**`,
                     value: '》 mache einen Vorschlag im Suggestion Channel',
                 },
                 {
-                    name: `⑉ **${prefix}cases/covid <Land>**`,
+                    name: `✻ **${prefix}cases/covid <Land>**`,
                     value: '》 covid Status Verfügbare Länder: germany, poland, united-kingdom, italy, united-states, denmark, russia, france, austria (österreich), luxembourg, switzerland, czech-republic, netherlands, belgium',
                 },
             )
