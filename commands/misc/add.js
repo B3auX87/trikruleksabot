@@ -17,7 +17,8 @@ module.exports = {
             .setTitle('【Ａｄｄｉｔｉｏｎ】')
             .setThumbnail('https://media.giphy.com/media/IvV2SJ6ukwsAEI9lBa/giphy.gif')
             .setDescription('𝔼 ℝ 𝔾 𝔼 𝔹 ℕ 𝕀 𝕊')
-            .addField('ᖇEᔕᑌᒪT 🌐 :', `${num1 + num2}`, true)
+            .addField('\u200b', '\u200b')
+            .addField('\u200b', `${num1 + num2}`, true)
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 
