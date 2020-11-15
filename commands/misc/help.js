@@ -15,7 +15,7 @@ module.exports = {
             .setTitle('【H】【E】【L】【P】')
             .setThumbnail('https://media.giphy.com/media/AXOdttXiL8MeI/giphy.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ** ${message.member.guild.name} **
-            ˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜`)
+            ˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜`)
             .addFields(
                 {
                     name: `✻ **${prefix}ahelp**`,
