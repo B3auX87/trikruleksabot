@@ -30,8 +30,16 @@ module.exports = {
                 .setTitle('【C】【L】【E】【A】【R】')
                 .setThumbnail('https://media.giphy.com/media/dUULQduJMNCH7ZI9RV/giphy.gif')
                 .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-                .addField('ᑕᒪEᗩᖇ ᑕᕼᗩᑎᑎEᒪ :', `${message.channel.name}`, true)
-                .addField('ᑕᒪEᗩᖇ:', `🆗`, true)
+                .addFields(
+                    {
+                        name: 'ᑕᒪEᗩᖇ ᑕᕼᗩᑎᑎEᒪ :',
+                        value: `》 ${message.channel.name}`,
+                    },
+                    {
+                        name: 'ᑕᒪEᗩᖇ :',
+                        value: '✅',
+                    },
+                )
                 .setTimestamp(message.createdTimestamp)
                 .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

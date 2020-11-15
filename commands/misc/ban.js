@@ -22,8 +22,16 @@ module.exports = {
             .setTitle('【B】【A】【N】')
             .setThumbnail('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gwif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-            .addField('🟢 Command User:', `${tag}`, true)
-            .addField('🔴 Banned User:', `${targetMember}`, true)
+            .addFields(
+                {
+                    name: '🟢 Command User:',
+                    value: `${tag}`,
+                },
+                {
+                    name: '🔴 Banned User:',
+                    value: `${targetMember}`,
+                },
+            )
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

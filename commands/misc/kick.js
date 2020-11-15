@@ -21,8 +21,16 @@ module.exports = {
             .setTitle('【K】【I】【C】【K】')
             .setThumbnail('https://64.media.tumblr.com/3356ce0a41ba251ce30e39e01ca06771/tumblr_o0t536PZNF1qjzdvgo5_500.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
-            .addField('🟢 Command User:', `${tag}`, true)
-            .addField('🔴 Kicked User:', `${targetMember}`, true)
+            .addFields(
+                {
+                    name: '🟢 Command User:',
+                    value: `${tag}`,
+                },
+                {
+                    name: '🔴 Kicked User:',
+                    value: `${targetMember}`,
+                },
+            )
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

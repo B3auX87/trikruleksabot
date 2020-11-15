@@ -15,8 +15,16 @@ module.exports = {
                 .setTitle('【P】【I】【N】【G】')
                 .setThumbnail('https://media.giphy.com/media/Kjqyc7spzgOK4/giphy.gif')
                 .setDescription('Dein Ping und der Ping vom Bot')
-                .addField('Dein Ping ☢', `${ping} ms`, true)
-                .addField('Leksa Ping ☣', `${client.ws.ping} ms`, true)
+                .addFields(
+                    {
+                        name: '🌏 Server Ping :',
+                        value: `↳ ${client.ws.ping} ms`,
+                    },
+                    {
+                        name: '🌍 Bot Ping :',
+                        value: `↳ ${ping} ms`,
+                    },
+                )
                 .setTimestamp(message.createdTimestamp)
                 .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

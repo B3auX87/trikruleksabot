@@ -94,7 +94,7 @@ module.exports = {
         if (!category) await message.guild.channels.create('Tickets & Vorschläge', {type: 'category'}).then(cat => category = cat)
         if (message.guild.channels.cache.find(cha => cha.name === `ticket-${username.toLowerCase()}`)) return message.reply('Du hast bereits ein Ticket erstellt!').then(msg => msg.delete({timeout: '5000'}))
 
-        let supRole = message.guild.roles.cache.find(rl => rl.name === 'Admin' || rl.name === 'Moderator' || rl.name === 'Helfer')
+        let supRole = message.guild.roles.cache.find(rl => rl.name === 'Admin')
 
         if (!supRole) return message.reply('Ich konnte leider keine Supporter Rolle finden, es wird entweder eine Rolle mit den Namen **Admin**, **Moderator** oder **Helfer** benötigt.').then(msg => msg.delete({timeout: '5000'}))
 

@@ -26,10 +26,24 @@ module.exports = {
                 .setTitle('ＣＯＶＩＤ_１９')
                 .setThumbnail('https://media.giphy.com/media/KCvzHXd3nz2Oh3LkNn/giphy.gif')
                 .setDescription(`  **Land**  :   ••¤ ${slug} ¤••`)
-                .addField('⚡️ Bestätigte:', `🢒 ${covidData.Confirmed}`, true)
-                .addField('💎 Gesundete:', `🢒 ${covidData.Recovered}`, true)
-                .addField('😷 Kranke:', `🢒 ${covidData.Active}`, true)
-                .addField('💀 Tote:', `🢒 ${covidData.Deaths}`, true)
+                .addFields(
+                    {
+                        name: '⚡️ Bestätigte:',
+                        value: `🢒 ${covidData.Confirmed}`,
+                    },
+                    {
+                        name: '💎 Gesundete:',
+                        value: `🢒 ${covidData.Recovered}`,
+                    },
+                    {
+                        name: '😷 Kranke:',
+                        value: `🢒 ${covidData.Active}`,
+                    },
+                    {
+                        name: '💀 Tote:',
+                        value: `🢒 ${covidData.Deaths}`,
+                    },
+                )
                 .setTimestamp(msg.createdTimestamp)
                 .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

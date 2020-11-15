@@ -18,6 +18,16 @@ module.exports = {
                 .setTitle('【P】【U】【R】【G】【E】')
                 .setThumbnail('https://media.giphy.com/media/Nbfanu3HvTMru/giphy.gif')
                 .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
+                .addFields(
+                    {
+                        name: 'ρυяgє 𝙲𝙷𝙰𝙽𝙽𝙴𝙻 :',
+                        value: `》 ${message.channel.name}`,
+                    },
+                    {
+                        name: 'ρυяgє :',
+                        value: `✅`,
+                    },
+                )
                 .addField('ρυяgє 𝙲𝙷𝙰𝙽𝙽𝙴𝙻:', `${message.channel.name}`, true)
                 .addField('ρυяgє:', `🆗`, true)
                 .setTimestamp(message.createdTimestamp)

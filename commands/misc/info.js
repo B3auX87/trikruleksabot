@@ -16,11 +16,26 @@ module.exports = {
             .setColor('#ddff87')
             .setTitle('【I】【N】【F】【O】')
             .setThumbnail(icon)
-            .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${name} ¤••`)
-            .addField('Ｓ𝐞яν𝒆𝐫 Member:', `${memberCount} / ${maximumMembers}`, true)
-            .addField('AFK-Timeout:', `${afkTimeout} / 60`, true)
-            .addField('Ｓ𝐞яν𝒆𝐫 Owner :', `${owner.user.tag}`, true)
-            .addField('Ｓ𝐞яν𝒆𝐫 Region:', `${region}`, true)
+            .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${name} ¤••
+            ˜”*°••°*”˜˜”*°••°*”˜˜”*°••°*”˜`)
+            addFields(
+                {
+                    name: '🔥 Ｓ𝐞яν𝒆𝐫 Member :',
+                    value: `▪ ${memberCount}`,
+                },
+                {
+                    name: '⛔️ AFK-Timeout :',
+                    value: `▪ ${afkTimeout} / 60`,
+                },
+                {
+                    name: '🌹 Ｓ𝐞яν𝒆𝐫 Owner :',
+                    value: `▪ ${owner.user.tag}`,
+                },
+                {
+                    name: '🌻 Ｓ𝐞яν𝒆𝐫 Region :',
+                    value: `▪ ${region}`,
+                },
+            )
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 

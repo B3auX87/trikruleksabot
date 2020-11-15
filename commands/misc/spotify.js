@@ -43,23 +43,23 @@ module.exports = {
                 .addFields(
                     {
                         name: '⤷ Name:',
-                        value: name,                    
+                        value: `◦ ${name}`,                    
                     },
                     {
                         name: '⤷ Album:',
-                        value: album,
+                        value: `◦ ${album}`,
                     },
                     {
                         name: '⤷ Artist:',
-                        value: artist,
+                        value: `◦ ${artist}`,
                     },
                     {
                         name: '⤷ Duration:',
-                        value: time,
+                        value: `◦ ${time}`,
                     },
                     {
                         name: '⤷ Listen now on Spotify!',
-                        value: `${artist} - ${name}\n (${url})`,
+                        value: `◦ ${artist} - ${name}\n (${url})`,
                     })
                     
             message.channel.send(embed).then(sentMessage => {
