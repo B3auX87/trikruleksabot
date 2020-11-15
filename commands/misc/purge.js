@@ -28,8 +28,6 @@ module.exports = {
                         value: `✅`,
                     },
                 )
-                .addField('ρυяgє 𝙲𝙷𝙰𝙽𝙽𝙴𝙻:', `${message.channel.name}`, true)
-                .addField('ρυяgє:', `🆗`, true)
                 .setTimestamp(message.createdTimestamp)
                 .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 
