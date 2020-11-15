@@ -36,7 +36,7 @@ module.exports = {
                     value: '》 Member kicken',
                 },
                 {
-                    name: `✻ **${prefix}eval <numm1 + / - / * / / num2>**`,
+                    name: `✻ **${prefix}eval <num1 + , - , * , / num2>**`,
                     value: '》 Mathe Helper (Owner Zugang)',
                 },
                 {
