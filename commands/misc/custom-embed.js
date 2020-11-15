@@ -6,7 +6,7 @@ module.exports = {
     maxArgs: 3,
     expectedArgs: '<Titel> <Text> <#HexColor>',
     permissions: 'ADMINISTRATOR',
-    callback: async (message, args, client) => {
+    callback: async (message, args) => {
 
         const avatar = message.author.displayAvatarURL({ dynamic: true, format: 'png' })
         const Embed = new Discord.MessageEmbed()
