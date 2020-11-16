@@ -20,7 +20,7 @@ module.exports = {
             .setAuthor('Leksa', 'https://wheedesign.com/img/design/13459094.png')
             .setColor('#ff3f76')
             .setTitle('【B】【A】【N】')
-            .setThumbnail('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gwif')
+            .setThumbnail('https://media.giphy.com/media/fe4dDMD2cAU5RfEaCU/giphy.gif')
             .setDescription(`  **Ｓ𝐞яν𝒆𝐫**  :   ••¤ ${message.member.guild.name} ¤••`)
             .addFields(
                 {
