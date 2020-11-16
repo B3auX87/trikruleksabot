@@ -5,7 +5,7 @@ const path = require('path')
 const fs = require('fs')
 const command = require('./utils/command')
 const memberCount = require('./utils/member-count')
-const polls = require('./advanced-polls')
+const polls = require('./utils/advanced-polls')
 
 client.on('ready', async () => {
 
