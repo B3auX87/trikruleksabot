@@ -36,7 +36,7 @@ module.exports = {
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
 
         message.reply(banEmbed).then(sentMessage => {
-            sentMessage.delete({ timeout: 6500 })
+            sentMessage.delete({ timeout: 8000 })
         })
 
     }
