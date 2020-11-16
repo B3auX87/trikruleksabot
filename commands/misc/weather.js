@@ -19,46 +19,46 @@ module.exports = {
 
             const embed = new Discord.MessageEmbed()
                 .setAuthor(current.observationpoint)
-                .setDescription(`> ${current.skytext}`)
+                .setDescription(`》 ${current.skytext}`)
                 .setThumbnail(current.imageUrl)
                 .setColor(0x7289DA)
                 .addFields(
 
                     {
-                        name: '> Breitengrad',
-                        value: location.lat,
+                        name: '》 Breitengrad',
+                        value: `⤷ ${location.lat}`,
                     },
                     {
-                        name: '> Längengrad',
-                        value: location.long,
+                        name: '》 Längengrad',
+                        value: `⤷ ${location.long}`,
                     },
                     {
-                        name: '> gefühlt wie',
-                        value: `${current.feelslike}°`,
+                        name: '》 gefühlt wie',
+                        value: `⤷ ${current.feelslike}°`,
                     },
                     {
-                        name: '> Einheit Typ',
-                        value: location.degreetype,
+                        name: '》 Einheit Typ',
+                        value: `⤷ ${location.degreetype}`,
                     },
                     {
-                        name: '> Wind',
-                        value: current.winddisplay,
+                        name: '》 Wind',
+                        value: `⤷ ${current.winddisplay}`,
                     },
                     {
-                        name: '> Luftfeuchtigkeit',
-                        value: `${current.humidity} %`,
+                        name: '》 Luftfeuchtigkeit',
+                        value: `⤷ ${current.humidity} %`,
                     },
                     {
-                        name: '> Timezone',
-                        value: `GMT ${location.timezone}`,
+                        name: '》 Timezone',
+                        value: `⤷ GMT ${location.timezone}`,
                     },
                     {
-                        name: '> Temperatur',
-                        value: `${current.temperature}°`,
+                        name: '》 Temperatur',
+                        value: `⤷ ${current.temperature}°`,
                     },
                     {
-                        name: '> Beobachtungs Zeit',
-                        value: current.observationtime,
+                        name: '》 Beobachtungs Zeit',
+                        value: `⤷ ${current.observationtime}`,
                     })
 
             message.channel.send(embed).then(sentMessage => {
