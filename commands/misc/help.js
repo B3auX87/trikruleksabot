@@ -66,8 +66,8 @@ module.exports = {
                     value: '》 Süße und witzige Katzen Bilder',
                 },
                 {
-                    name: `✻ **${prefix}dogs/puppy**`,
-                    value: '》 Süße und witzige Hunde Bilder',
+                    name: `✻ **${prefix}pet/pets**`,
+                    value: '》 Süße und witzige Tier Bilder',
                 },
             )
             .setTimestamp(message.createdTimestamp)

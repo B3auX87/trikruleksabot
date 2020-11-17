@@ -8,7 +8,7 @@ var subreddits = [
 var sub = subreddits[Math.round(Math.random() * (subreddits.length - 1))]
 
 module.exports = {
-    commands: ['dogs', 'puppy'],
+    commands: ['pet', 'pets'],
     maxArgs: 0,
     callback: (message) => {
 
