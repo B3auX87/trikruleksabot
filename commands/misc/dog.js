@@ -1,4 +1,5 @@
 const Discord = require('discord.js')
+const { get } = require("snekfetch")
 
 module.exports = {
     commands: ['dogs', 'puppy'],
