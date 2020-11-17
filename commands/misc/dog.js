@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const { get } = require("snekfetch")
+const superagent = require("superagent")
 
 module.exports = {
     commands: ['dogs', 'puppy'],
@@ -7,18 +7,22 @@ module.exports = {
     maxArgs: 0,
     callback: (message) => {
 
-        try {
+        let msg = await message.channel.send("Generating...")
 
-            get('https://dog.ceo/api/breeds/image/random').then(res => {
+        let { body } = await superagent
+            .get(`https://dog.ceo/api/breeds/image/random`)
 
-                const embed = new Discord.MessageEmbed()
-                    .setImage(res.body.file)
-                return message.channel.send({ embed })
-            })
+        if (!{ body }) return message.channel.send("I broke! Try again.")
 
-        } catch (err) { 
+        let dEmbed = new Discord.RichEmbed()
+            .setColor('#e0ffff')
+            .setAuthor(`DOGS!`, message.guild.iconURL)
+            .setImage(body.message)
+            .setTimestamp()
+            .setFooter(`Leksa`, bot.user.displayAvatarURL)
 
-            return message.channel.send(err.stack) 
-        }
+        message.channel.send({ embed: dEmbed })
+
+        msg.delete();
     }
 }
