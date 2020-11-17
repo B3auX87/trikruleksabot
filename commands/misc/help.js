@@ -61,6 +61,10 @@ module.exports = {
                     name: `✻ **${prefix}cases/covid <Land>**`,
                     value: '》 covid Status Verfügbare Länder: germany, poland, united-kingdom, italy, united-states, denmark, russia, france, austria (österreich), luxembourg, switzerland, czech-republic, netherlands, belgium',
                 },
+                {
+                    name: `✻ **${prefix}cats/kitty**`,
+                    value: '》 Süße und witzige Katzen Bilder',
+                },
             )
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');
