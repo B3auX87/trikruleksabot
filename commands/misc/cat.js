@@ -1,5 +1,6 @@
-const { get } = require("snekfetch")
+var pixabay = require("pixabay-api")
 const Discord = require('discord.js')
+var key = '19143808-fba6a26e8d83c33743d771be6'
 
 module.exports = {
     commands: ['cats', 'kitty'],
@@ -7,19 +8,14 @@ module.exports = {
     maxArgs: 0,
     callback: (message) => {
 
-        try {
+        pixabay.searchImages(key, 'cats').then((r) => {
+           
+            message.reply(new Discord.MessageEmbed()
+                .setTitle("Random Cats")
+               
+                .setImage(r.hits[Math.floor(Math.random() * r.hits.length)].largeImageURL))
 
-            get('https://aws.random.cat/meow').then(res => {
-
-                const embed = new Discord.MessageEmbed()
-                    .setImage(res.body.file)
-                return message.channel.send({ embed })
-            })
-
-        } catch (err) {
-
-            return message.channel.send(err.stack)
-        }
+        })
     }
 }
     
