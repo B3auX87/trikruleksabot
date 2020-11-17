@@ -15,7 +15,7 @@ module.exports = {
                 return message.channel.send({ embed })
             })
 
-        } catch (err) {
+        } catch (err) { 
 
             return message.channel.send(err.stack)
         }

@@ -69,6 +69,10 @@ module.exports = {
                     name: `✻ **${prefix}pet/pets**`,
                     value: '》 Süße und witzige Tier Bilder',
                 },
+                {
+                    name: `✻ **${prefix}dogs/puppy**`,
+                    value: '》 Süße und witzige Hunde Bilder',
+                },
             )
             .setTimestamp(message.createdTimestamp)
             .setFooter('mc.trikru.de', 'https://wheedesign.com/img/design/13459094.png');

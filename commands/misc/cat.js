@@ -13,12 +13,12 @@ module.exports = {
 
                 const embed = new Discord.MessageEmbed()
                     .setImage(res.body.file)
-                return message.channel.send({ embed });
+                return message.channel.send({ embed })
             })
 
         } catch (err) {
 
-            return message.channel.send(err.stack);
+            return message.channel.send(err.stack)
         }
     }
 }
