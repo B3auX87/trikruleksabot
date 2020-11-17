@@ -14,7 +14,7 @@ module.exports = {
 
         if (!{ body }) return message.channel.send("I broke! Try again.")
 
-        const dEmbed = new Discord.MessageEmbed()
+        let dEmbed = new Discord.MessageEmbed()
 
             .setColor('#e0ffff')
             .setAuthor(`DOGS!`, message.guild.iconURL)
