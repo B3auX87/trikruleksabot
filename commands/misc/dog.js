@@ -18,7 +18,7 @@ module.exports = {
 
         } catch (err) { 
 
-            return message.channel.send(err.stack)
+            return message.channel.send(err.stack) 
         }
     }
 }
