@@ -1,5 +1,6 @@
 const Discord = require('discord.js')
 var pixabay = require("pixabay-api")
+var key = '19143808-fba6a26e8d83c33743d771be6'
 
 module.exports = {
     commands: ['dogs', 'puppy'],
