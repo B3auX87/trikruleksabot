@@ -5,7 +5,7 @@ module.exports = {
     commands: ['dogs', 'puppy'],
     minArgs: 0,
     maxArgs: 0,
-    callback: (message) => {
+    callback: async (message) => {
 
         let msg = await message.channel.send("Generating...")
 
