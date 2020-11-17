@@ -18,6 +18,7 @@
     "cli": "^1.0.1",
     "discord.js": "^12.4.1",
     "parse-ms": "^2.1.0",
+    "pixabay-api": "^1.0.4",
     "random-puppy": "^1.1.0",
     "snekfetch": "^4.0.4",
     "superagent": "^6.1.0",

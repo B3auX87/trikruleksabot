@@ -1,5 +1,5 @@
 const Discord = require('discord.js')
-const superagent = require("superagent")
+var pixabay = require("pixabay-api")
 
 module.exports = {
     commands: ['dogs', 'puppy'],
@@ -7,23 +7,13 @@ module.exports = {
     maxArgs: 0,
     callback: async (message) => {
 
-        let msg = await message.channel.send("Generating...")
+        pixabay.searchImages(key, 'puppy').then((r) => {
+            //create embed
+            message.reply(new Discord.MessageEmbed()
+                .setTitle("Random Puppy")
+                //get random puppy image from response
+                .setImage(r.hits[Math.floor(Math.random() * r.hits.length)].largeImageURL))
 
-        let { body } = await superagent
-            .get(`https://dog.ceo/api/breeds/image/random`)
-
-        if (!{ body }) return message.channel.send("I broke! Try again.")
-
-        let dEmbed = new Discord.MessageEmbed()
-
-            .setColor('#e0ffff')
-            .setAuthor(`DOGS!`, message.guild.iconURL)
-            .setImage(body.message)
-            .setTimestamp()
-            .setFooter(`Leksa`)
-
-        message.channel.send({ dEmbed })
-
-        msg.delete();
+        })
     }
 }
