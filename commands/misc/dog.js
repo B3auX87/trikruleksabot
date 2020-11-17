@@ -1,28 +1,23 @@
-const rp = require('random-puppy')
-
-var subreddits = [
-    'Rabbits',
-    'cutebunnies'
-]
-
-var sub = subreddits[Math.round(Math.random() * (subreddits.length - 1))]
+const Discord = require('discord.js')
 
 module.exports = {
-    commands: ['pet', 'pets'],
+    commands: ['dogs', 'puppy'],
+    minArgs: 0,
     maxArgs: 0,
     callback: (message) => {
 
         try {
 
-            rp(sub).then(url => {
+            get('https://dog.ceo/api/breeds/image/random').then(res => {
 
-                message.channel.send(url);
-
+                const embed = new Discord.MessageEmbed()
+                    .setImage(res.body.file)
+                return message.channel.send({ embed })
             })
 
-        } catch (e) {
+        } catch (err) {
 
-            console.log(e)
+            return message.channel.send(err.stack)
         }
     }
 }
