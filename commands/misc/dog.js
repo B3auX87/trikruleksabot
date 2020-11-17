@@ -15,14 +15,14 @@ module.exports = {
         if (!{ body }) return message.channel.send("I broke! Try again.")
 
         const dEmbed = new Discord.MessageEmbed()
-        
+
             .setColor('#e0ffff')
             .setAuthor(`DOGS!`, message.guild.iconURL)
             .setImage(body.message)
             .setTimestamp()
-            .setFooter(`Leksa`, bot.user.displayAvatarURL)
+            .setFooter(`Leksa`)
 
-        message.channel.send({ embed: dEmbed })
+        message.channel.send({ dEmbed })
 
         msg.delete();
     }
